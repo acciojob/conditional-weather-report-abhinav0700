@@ -1,21 +1,15 @@
 import React from "react";
 
-const WeatherDisplay = ({ weather }) => {
-
-  // conditional color check
-  const colorStyle = {
-    color: weather.temperature > 20 ? "red" : "blue"
-  };
-
+const WeatherDisplay = ({ weatherData }) => {
   return (
     <div>
-      {/* temperature span inside p */}
       <p>
-        Temperature: <span style={colorStyle}>{weather.temperature}°C</span>
+        Temperature:{" "}
+        <span style={{ color: weatherData.temperature > 20 ? "red" : "blue" }}>
+          {weatherData.temperature}
+        </span>
       </p>
-
-      {/* conditions */}
-      <p>Condition: {weather.conditions}</p>
+      <p>Conditions: {weatherData.conditions}</p>
     </div>
   );
 };
