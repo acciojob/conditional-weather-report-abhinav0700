@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import WeatherDisplay from "./WeatherDisplay";
-import "./styles/App.css";
-
+import './../styles/App.css';
 const App = () => {
 
   // hardcoded weather data stored using useState
